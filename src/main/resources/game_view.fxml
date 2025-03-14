@@ -1,24 +1,36 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.Scene?>
+<?import javafx.scene.Cursor?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
-<?import javafx.stage.Stage?>
+<?import javafx.scene.text.Font?>
 
-<Stage xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.microproyects.controller.GameController">
-    <scene>
-        <Scene>
-            <AnchorPane prefHeight="493.0" prefWidth="762.0">
-            <children>
-               <Label fx:id="wordLabel" alignment="CENTER" layoutX="290.0" layoutY="167.0" prefHeight="39.0" prefWidth="183.0" text="palabra" textAlignment="CENTER" textFill="#804e4e" />
-               <TextField fx:id="inputField" layoutX="222.0" layoutY="274.0" prefHeight="40.0" prefWidth="318.0" />
-               <Button fx:id="validateButton" layoutX="355.0" layoutY="333.0" mnemonicParsing="false" onAction="#validateWord" text="Button" />
-               <Label fx:id="levelLabel" layoutX="588.0" layoutY="35.0" prefHeight="17.0" prefWidth="127.0" text="NIVEL ACTUAL" />
-               <Label fx:id="timeLabel" alignment="CENTER" layoutX="310.0" layoutY="86.0" prefHeight="72.0" prefWidth="144.0" text="TIEMPO RESTANTE" />
-               <Label fx:id="messageLabel" layoutX="365.0" layoutY="238.0" text="Label" />
-            </children></AnchorPane>
-        </Scene>
-    </scene>
-</Stage>
+<AnchorPane prefHeight="400.0" prefWidth="600.0" style="-fx-background-color: ea9f58;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.microproyects.controller.GameController">
+    <children>
+        <Label fx:id="wordLabel" alignment="CENTER" layoutX="135.0" layoutY="85.0" prefHeight="85.0" prefWidth="314.0" text="PALABRA" textAlignment="CENTER">
+         <font>
+            <Font name="Nirmala UI" size="55.0" />
+         </font></Label>
+        <TextField fx:id="inputField" layoutX="191.0" layoutY="181.0" onKeyPressed="#handleKeyPressed" prefHeight="26.0" prefWidth="202.0">
+         <font>
+            <Font size="24.0" />
+         </font></TextField>
+        <Button fx:id="validateButton" layoutX="266.0" layoutY="269.0" mnemonicParsing="false" onAction="#validateWord" text="validar" textAlignment="CENTER" />
+        <Label fx:id="levelLabel" layoutX="477.0" layoutY="40.0" prefHeight="35.0" prefWidth="137.0" text="LEVEL: ACTUAL">
+         <font>
+            <Font name="Sitka Display" size="18.0" />
+         </font></Label>
+        <Label fx:id="timeLabel" alignment="CENTER" layoutX="179.0" layoutY="324.0" prefHeight="18.0" prefWidth="229.0" text="TIEMPO RESTANTE" textAlignment="CENTER">
+         <font>
+            <Font name="Yu Gothic Regular" size="22.0" />
+         </font></Label>
+        <Label fx:id="messageLabel" layoutX="261.0" layoutY="233.0" text="COMENTARIOS" textAlignment="CENTER" />
+      <ImageView fx:id="livesImageView" fitHeight="137.0" fitWidth="126.0" layoutX="24.0" layoutY="23.0" pickOnBounds="true" preserveRatio="true" />
+    </children>
+   <cursor>
+      <Cursor fx:constant="DEFAULT" />
+   </cursor>
+</AnchorPane>
