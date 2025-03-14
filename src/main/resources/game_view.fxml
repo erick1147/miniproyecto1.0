@@ -1,22 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import com.gluonhq.charm.glisten.control.TextField?>
 <?import javafx.scene.Scene?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.stage.Stage?>
 
-<Stage xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<Stage xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.microproyects.controller.GameController">
     <scene>
         <Scene>
             <AnchorPane prefHeight="493.0" prefWidth="762.0">
             <children>
-               <Label alignment="CENTER" layoutX="290.0" layoutY="197.0" prefHeight="39.0" prefWidth="183.0" text="palabra" textAlignment="CENTER" textFill="#804e4e" />
-               <TextField layoutX="222.0" layoutY="274.0" prefHeight="40.0" prefWidth="318.0" />
-               <Button layoutX="355.0" layoutY="314.0" mnemonicParsing="false" text="Button" />
-               <Label layoutX="32.0" layoutY="27.0" prefHeight="17.0" prefWidth="127.0" text="NIVEL ACTUAL" />
-               <Label alignment="CENTER" layoutX="310.0" layoutY="86.0" prefHeight="72.0" prefWidth="144.0" text="TIEMPO RESTANTE" />
+               <Label fx:id="wordLabel" alignment="CENTER" layoutX="290.0" layoutY="167.0" prefHeight="39.0" prefWidth="183.0" text="palabra" textAlignment="CENTER" textFill="#804e4e" />
+               <TextField fx:id="inputField" layoutX="222.0" layoutY="274.0" prefHeight="40.0" prefWidth="318.0" />
+               <Button fx:id="validateButton" layoutX="355.0" layoutY="333.0" mnemonicParsing="false" onAction="#validateWord" text="Button" />
+               <Label fx:id="levelLabel" layoutX="588.0" layoutY="35.0" prefHeight="17.0" prefWidth="127.0" text="NIVEL ACTUAL" />
+               <Label fx:id="timeLabel" alignment="CENTER" layoutX="310.0" layoutY="86.0" prefHeight="72.0" prefWidth="144.0" text="TIEMPO RESTANTE" />
+               <Label fx:id="messageLabel" layoutX="365.0" layoutY="238.0" text="Label" />
             </children></AnchorPane>
         </Scene>
     </scene>
